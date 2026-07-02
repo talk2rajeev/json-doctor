@@ -2,20 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Json Formatter, Json Editor, Json Compare</title>
-    <!-- <script>
-      require.config({
-        paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.34.0/min/vs' },
-      });
-      require(['vs/editor/editor.main'], () => {});
-    </script> -->
+    <title>Json Doctor</title>
+    <script>
+      // GitHub Pages SPA redirect handler
+      (function() {
+        const redirect = new URLSearchParams(window.location.search).get('redirect');
+        if (redirect) {
+          const newPath = '/' + redirect;
+          window.history.replaceState(null, '', newPath);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.34.0/min/vs/loader.js"></script>
-
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
