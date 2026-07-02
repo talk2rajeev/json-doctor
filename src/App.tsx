@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import JsonEditor from './pages/JsonEditor';
 import JsonCompare from './pages/JsonCompare';
@@ -20,7 +20,7 @@ const App: React.FC = () => {
                 <Header />
                 <main className="flex-grow p-4">
                   <Routes>
-                    <Route path="/" element={<Navigate to="/editor" replace />} />
+                    <Route path="/" element={<JsonEditor />} />
                     <Route path="/editor" element={<JsonEditor />} />
                     <Route path="/compare" element={<JsonCompare />} />
                     <Route path="*" element={<div>404 Not Found</div>} />

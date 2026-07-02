@@ -55,7 +55,7 @@ const Header: React.FC = () => {
         <ul className="flex space-x-4">
           <li>
             <NavLink 
-              to="/editor" 
+              to="/" 
               className={({ isActive }) => 
                 `hover:text-blue-400 transition-colors ${isActive ? 'text-blue-400 border-b-2 border-blue-400' : ''}`
               }
